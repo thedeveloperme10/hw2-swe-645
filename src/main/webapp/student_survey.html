@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CS Department Student Survey Page</title> <!-- Title of the survey page -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="nav">
+            <h1 style="margin-left: 20px; color: #006633;">Department of <br><b>Computer Science</b></h1>
+            <img width="300" height="90px" style="margin-left: 400px;"
+                src="https://alumni.gmu.edu/s/1564/images/gid2/editor/unit_and_chapter_logos/vse/gmuunitilogos_vse.jpg"
+                alt=""> <!-- Logo of GMU attached as an image using img tag -->
+        </div>
+        <div class="container mt-4">
+            <h2>Prospective Students Survey Page</h2>  <!-- Heading 2 -->
+            <form action="#" method="post" autocomplete="on" id="myForm">
+                <div class="form-group">
+                    <label for="username">First Name<span style="color: red;"> *</span></label> <!-- Label with a required symbol -->
+                    <input type="text" class="form-control" id="username" name="firstname" required
+                        placeholder="Eg: John">
+                </div>
+                <div class="form-group">
+                    <label for="username">Last Name<span style="color: red;"> *</span></label>
+                    <input type="text" class="form-control" id="username" name="lastname" required placeholder="Eg: Doe"> <!-- Input with text type -->
+                </div>
+                <div class="form-group">
+                    <label for="address">Street Address<span style="color: red;"> *</span></label>
+                    <input type="text" class="form-control" id="address" name="address" placeholder="Eg: 123 ABC St" required>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="city">City<span style="color: red;"> *</span></label>
+                        <input type="text" class="form-control" id="city" name="city" placeholder="Eg: New York City" required>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="state">State<span style="color: red;"> *</span></label>
+                        <input type="text" class="form-control" id="state" name="state" placeholder="Eg: CO" required>
+                    </div>
+                    <div class="form-group col-md-2">
+                        <label for="zip">Zip<span style="color: red;"> *</span></label>
+                        <input type="text" class="form-control" id="zip" name="zip" placeholder="Eg: 22031" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="telephone">Telephone Number<span style="color: red;"> *</span></label>
+                    <input type="tel" class="form-control" id="telephone" name="telephone"
+                        placeholder="Eg: 123-456-7890" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail<span style="color: red;"> *</span></label>
+                    <input type="email" class="form-control" id="email" name="email" required
+                        placeholder="Eg: johndoe@gmail.com">
+                </div>
+                <div class="form-group">
+                    <label for="surveyDate">Date of Survey<span style="color: red;"> *</span></label>
+                    <input type="date" class="form-control" id="surveyDate" name="surveyDate">
+                </div>
+                <div class="form-group">
+                    <label for="likedMost">What did you like most about the campus?</label><br>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="likedStudents" name="likedStudents"> <!-- Input with checkbox type -->
+                        <label class="form-check-label" for="likedStudents">Students</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="likedLocation" name="likedLocation">
+                        <label class="form-check-label" for="likedLocation">Location</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="likedCampus" name="likedCampus">
+                        <label class="form-check-label" for="likedCampus">Campus</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="likedAtmosphere" name="likedAtmosphere">
+                        <label class="form-check-label" for="likedAtmosphere">Atmosphere</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="likedDormRooms" name="likedDormRooms">
+                        <label class="form-check-label" for="likedDormRooms">Dorm Rooms</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="likedSports" name="likedSports">
+                        <label class="form-check-label" for="likedSports">Sports</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>How did you become interested in the university?</label><br>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" id="interestFriends" name="interest"
+                            value="friends"> <!-- Input with radio type -->
+                        <label class="form-check-label" for="interestFriends">Friends</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" id="interestTV" name="interest" value="television">
+                        <label class="form-check-label" for="interestTV">Television</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" id="interestInternet" name="interest"
+                            value="Internet">
+                        <label class="form-check-label" for="interestInternet">Internet</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" id="interestOther" name="interest" value="other">
+                        <label class="form-check-label" for="interestOther">Other</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="recommended">Likelihood of Recommending</label>
+                    <select class="form-control" id="recommended" name="recommended"> 
+                        <option value="Very Likely">Very Likely</option><!-- Options type with multiple values -->
+                        <option value="Likely">Likely</option>
+                        <option value="Unlikely">Unlikely</option>
+                    </select>
+                </div>
+                <label for="numbers">Enter at least ten comma-separated numbers (1-100):</label><br>
+                <input type="text" id="numbers" name="numbers" pattern="^(\s*\d{1,2}\s*(,\s*\d{1,2}\s*){9,})$" required><br> <!-- Raffle text field -->
+                <small>Separate numbers with commas. Example: 1, 5, 10, 20, 30, 40, 50, 60, 70, 80</small><br>
+                <div class="form-group">
+                    <label for="comments">Additional Comments</label>
+                    <textarea class="form-control" id="comments" name="comments" rows="4"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="button" class="btn btn-danger" id="cancelButton">Cancel</button>
+            </form>
+        </div>
+        <br>
+
+        <footer class="nav">
+            <p class="foo">Link to <a href="./index.html" target="_blank">Vignesh's Portfolio</a></p>
+        </footer>
+        <br>
+    </div>
+</body>
+
+</html>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("username").focus(); //Snippet to make the username field focused
+    });
+    
+    document.getElementById('cancelButton').addEventListener('click', function() {
+        document.getElementById('myForm').reset(); 
+    }); //Snippet to reset the form data
+  
+</script>
