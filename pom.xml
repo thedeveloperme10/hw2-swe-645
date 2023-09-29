@@ -23,5 +23,6 @@
                 </configuration>
             </plugin>
         </plugins>
+        <finalName>swe-642-cicd</finalName>
     </build>
 </project>
