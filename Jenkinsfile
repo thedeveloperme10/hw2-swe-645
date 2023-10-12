@@ -30,7 +30,8 @@ pipeline{
         stage("Deploy to kubernetes"){
             steps{
                 script{
-                    kubernetesDeploy configs: 'deploymentservice.yaml', kubeConfig: [path: ''], kubeconfigId: 'k8s', secretName: '', ssh: [sshCredentialsId: '*', sshServer: ''], textCredentials: [certificateAuthorityData: '', clientCertificateData: '', clientKeyData: '', serverUrl: 'https://']
+                    env.KUBECONFIG = '/home/ubuntu/.kube/config'
+                    sh("kubectl --kubeconfig=${env.KUBECONFIG} set image deployment/swe-645-hw2 container-0=vsomasun/swe-642-cicd -n default")
                 }
             }
         }
